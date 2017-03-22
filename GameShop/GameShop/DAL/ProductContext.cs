@@ -100,18 +100,17 @@ namespace GameShop.DAL
             return ps;
         }
 
-<<<<<<< HEAD
-        public Dictionary<object, string> searchProduct(string search)
+        public List<Products> searchProduct(string search, int cid)
         {
             SqlCommand command;
-            Dictionary<object, string> dict = new Dictionary<object, string>();
+            List<Products> ps = new List<Products>();
             SqlConnection connection = null;
             SqlDataReader data = null;
             string sql = "SELECT [ProductID], [ProductName], [Description], " +
                          "[Price], [Sale], p.SupplierID, c.CategoryID, c.CategoryName, s.CompanyName, " +
                          "[PublishDate], [Rating] FROM [Products] p JOIN Categories c ON p.CategoryID = c.CategoryID " +
                          "JOIN Suppliers s ON s.SupplierID = p.SupplierID " +
-                         "WHERE p.ProductName LIKE '%'+@param1+'%' OR c.CategoryName LIKE '%'+@param2+'%' OR s.CompanyName LIKE '%'+@param3+'%'";
+                         "WHERE c.CategoryID = @param2 AND ( p.ProductName LIKE '%'+@param1+'%' OR s.CompanyName LIKE '%'+@param3+'%') ";
             try
             {
                 connection = DBContext.openConnection();
@@ -119,7 +118,7 @@ namespace GameShop.DAL
                 command.CommandType = System.Data.CommandType.Text;
                 command.CommandText = sql;
                 command.Parameters.AddWithValue("@param1", search);
-                command.Parameters.AddWithValue("@param2", search);
+                command.Parameters.AddWithValue("@param2", cid);
                 command.Parameters.AddWithValue("@param3", search);
                 data = command.ExecuteReader();
                 while (data.Read())
@@ -136,11 +135,7 @@ namespace GameShop.DAL
                     DateTime date = Convert.ToDateTime(data["PublishDate"]);
                     int rate = Convert.ToInt16(data["Rating"]);
                     Products p = new Products(id, name, des, price, sale, date, rate, new Categories(cateID, cateName), new Suppliers(spID, spName));
-                    Categories c = new Categories(cateID, cateName);
-                    Suppliers s = new Suppliers(spID, spName);
-                    dict.Add(p, "product");
-                    dict.Add(c, "category");
-                    dict.Add(s, "supplier");
+                    ps.Add(p);
                 }
             }
             catch (Exception ex)
@@ -153,9 +148,7 @@ namespace GameShop.DAL
                 data.Close();
                 DBContext.closeConnection(connection);
             }
-            return dict;
+            return ps;
         }
-=======
->>>>>>> 6b49dda9a24cbb7ce69ea5b3ddadf916341b9a0c
     }
 }

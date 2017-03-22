@@ -67,6 +67,9 @@ namespace GameShop
         public void showAllBtn_Click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
+            Console.WriteLine(btn.Name);
+            ListAll form = new ListAll(Convert.ToInt16(btn.Name));
+            form.Show();
         }
 
         public void btnGame_Click(object sender, EventArgs e)
@@ -149,14 +152,6 @@ namespace GameShop
         private void bunifuImageButton3_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void bunifuMetroTextbox1_OnValueChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void bunifuThinButton21_Click(object sender, EventArgs e)
-        {
         }
     }
 }

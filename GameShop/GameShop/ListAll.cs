@@ -14,61 +14,92 @@ namespace GameShop
 {
     public partial class ListAll : Form
     {
-        public ListAll()
+        public int id;
+        public ListAll(int pid)
         {
+            id = pid;
             InitializeComponent();
         }
 
-        private void bunifuFlatButton1_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-        int id;
         private void ListAll_Load(object sender, EventArgs e)
         {
             ProductContext productContext = new ProductContext();
             List<Products> products = productContext.getByCategoryID(id);
-            int row = products.Count % 5;
-            int indexPl1 = 0;
-            for (int i = 0; i < row; i++)
-            {               
-                Panel pl2 = new Panel();
-                pl2.BackColor = Color.White;
-                pl2.Size = new Size(985, 172);
-                pl2.Location = new Point(6, 37);
+            ImageContext imageContext = new ImageContext();
 
-                int indexPl2 = 1;
-                for (int j = 0; j < products.Count; j++)
+            int indexPl1X = 5;
+            int indexPl1Y = 0;
+            for (int i = 0; i < products.Count; i++)
+            {
+                Button btn1 = new Button();
+                btn1.FlatStyle = FlatStyle.Flat;
+                btn1.Size = new Size(130, 130);
+                btn1.Location = new Point(indexPl1X, indexPl1Y);
+                btn1.FlatAppearance.BorderSize = 0;
+
+                //Image myimage = new Bitmap(@folderImgPath()+@"Image\nier\pic5.jpg");
+                Images img = imageContext.getByProductID(products[i].id);
+                Image myimage = new Bitmap(@"C:\Users\Jic\Desktop\" + @img.url);
+                btn1.BackgroundImage = myimage;
+                btn1.BackgroundImageLayout = ImageLayout.Stretch;
+
+                if (i % 5 == 0 && i != 0)
+                {
+                    indexPl1Y += 130;
+                }
+                pnContentImg.Controls.Add(btn1);
+                indexPl1X += 135;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnImg_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void tbSearch_TextChanged(object sender, EventArgs e)
+        {
+            CategoryContext categoryContext = new CategoryContext();
+            ProductContext productContext = new ProductContext();
+            ImageContext imageContext = new ImageContext();
+
+            List<Products> products = productContext.searchProduct(tbSearch.Text, id);
+
+            if (products.Count > 0)
+            {
+                pnContentImg.Controls.Clear();
+                pnContentImg.Invalidate();
+                pnContentImg.Refresh();
+
+                int indexPl1X = 5;
+                int indexPl1Y = 0;
+                for (int i = 0; i < products.Count; i++)
                 {
                     Button btn1 = new Button();
                     btn1.FlatStyle = FlatStyle.Flat;
-                    btn1.Text += "button";
-                    btn1.Size = new Size(192, 180);
-                    btn1.Location = new Point(indexPl2, 0);
+                    btn1.Size = new Size(130, 130);
+                    btn1.Location = new Point(indexPl1X, indexPl1Y);
                     btn1.FlatAppearance.BorderSize = 0;
+
                     //Image myimage = new Bitmap(@folderImgPath()+@"Image\nier\pic5.jpg");
-                    Image myimage = new Bitmap(@"C:\Users\Jic\Desktop\Image\ds3\pic1.jpg");
+                    Images img = imageContext.getByProductID(products[i].id);
+                    Image myimage = new Bitmap(@"C:\Users\Jic\Desktop\" + @img.url);
                     btn1.BackgroundImage = myimage;
                     btn1.BackgroundImageLayout = ImageLayout.Stretch;
 
-                    pl2.Controls.Add(btn1);
-                    if (j % 5 == 0) {
-                        indexPl2 += 198;
-
+                    if (i % 5 == 0 && i != 0)
+                    {
+                        indexPl1Y += 130;
                     }
+                    pnContentImg.Controls.Add(btn1);
+                    indexPl1X += 135;
                 }
-
-
-                Panel pl1 = new Panel();
-                pl1.BackColor = Color.CornflowerBlue;
-                pl1.Size = new Size(997, 223);
-                pl1.Location = new Point(0, indexPl1);
-
-                pl1.Controls.Add(pl2);
-
-                pnAll.Controls.Add(pl1);
-                indexPl1 += 229;
-            }
+            }  
         }
     }
 }
