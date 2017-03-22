@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductDetail));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -44,12 +45,13 @@
             this.label9 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnAddcart = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnAddwishlist = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -86,15 +88,15 @@
             this.panel4.Size = new System.Drawing.Size(343, 284);
             this.panel4.TabIndex = 1;
             // 
-            // label1
+            // labelName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(460, 68);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 39);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Name";
+            this.labelName.AutoSize = true;
+            this.labelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelName.Location = new System.Drawing.Point(460, 68);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(112, 39);
+            this.labelName.TabIndex = 2;
+            this.labelName.Text = "Name";
             // 
             // label2
             // 
@@ -183,71 +185,71 @@
             // 
             // panel5
             // 
-            this.panel5.Location = new System.Drawing.Point(58, 358);
+            this.panel5.Location = new System.Drawing.Point(58, 346);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(142, 100);
             this.panel5.TabIndex = 11;
             // 
             // panel6
             // 
-            this.panel6.Location = new System.Drawing.Point(259, 359);
+            this.panel6.Location = new System.Drawing.Point(259, 346);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(142, 100);
             this.panel6.TabIndex = 12;
             // 
-            // bunifuThinButton21
+            // btnAddcart
             // 
-            this.bunifuThinButton21.ActiveBorderThickness = 1;
-            this.bunifuThinButton21.ActiveCornerRadius = 20;
-            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuThinButton21.ButtonText = "Add to cart";
-            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton21.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.IdleBorderThickness = 1;
-            this.bunifuThinButton21.IdleCornerRadius = 20;
-            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(450, 367);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(181, 51);
-            this.bunifuThinButton21.TabIndex = 13;
-            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAddcart.ActiveBorderThickness = 1;
+            this.btnAddcart.ActiveCornerRadius = 20;
+            this.btnAddcart.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btnAddcart.ActiveForecolor = System.Drawing.Color.White;
+            this.btnAddcart.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btnAddcart.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAddcart.ButtonText = "Add to cart";
+            this.btnAddcart.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddcart.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddcart.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnAddcart.IdleBorderThickness = 1;
+            this.btnAddcart.IdleCornerRadius = 20;
+            this.btnAddcart.IdleFillColor = System.Drawing.Color.White;
+            this.btnAddcart.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.btnAddcart.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btnAddcart.Location = new System.Drawing.Point(450, 367);
+            this.btnAddcart.Margin = new System.Windows.Forms.Padding(5);
+            this.btnAddcart.Name = "btnAddcart";
+            this.btnAddcart.Size = new System.Drawing.Size(181, 51);
+            this.btnAddcart.TabIndex = 13;
+            this.btnAddcart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bunifuThinButton22
+            // btnAddwishlist
             // 
-            this.bunifuThinButton22.ActiveBorderThickness = 1;
-            this.bunifuThinButton22.ActiveCornerRadius = 20;
-            this.bunifuThinButton22.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton22.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton22.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton22.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuThinButton22.ButtonText = "Add wishlist";
-            this.bunifuThinButton22.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton22.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton22.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton22.IdleBorderThickness = 1;
-            this.bunifuThinButton22.IdleCornerRadius = 20;
-            this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton22.Location = new System.Drawing.Point(719, 367);
-            this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton22.Name = "bunifuThinButton22";
-            this.bunifuThinButton22.Size = new System.Drawing.Size(181, 51);
-            this.bunifuThinButton22.TabIndex = 14;
-            this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAddwishlist.ActiveBorderThickness = 1;
+            this.btnAddwishlist.ActiveCornerRadius = 20;
+            this.btnAddwishlist.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btnAddwishlist.ActiveForecolor = System.Drawing.Color.White;
+            this.btnAddwishlist.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btnAddwishlist.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAddwishlist.ButtonText = "Add wishlist";
+            this.btnAddwishlist.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddwishlist.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddwishlist.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnAddwishlist.IdleBorderThickness = 1;
+            this.btnAddwishlist.IdleCornerRadius = 20;
+            this.btnAddwishlist.IdleFillColor = System.Drawing.Color.White;
+            this.btnAddwishlist.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.btnAddwishlist.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btnAddwishlist.Location = new System.Drawing.Point(719, 367);
+            this.btnAddwishlist.Margin = new System.Windows.Forms.Padding(5);
+            this.btnAddwishlist.Name = "btnAddwishlist";
+            this.btnAddwishlist.Size = new System.Drawing.Size(181, 51);
+            this.btnAddwishlist.TabIndex = 14;
+            this.btnAddwishlist.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel7
             // 
-            this.panel7.Location = new System.Drawing.Point(58, 529);
+            this.panel7.Location = new System.Drawing.Point(58, 496);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(891, 188);
+            this.panel7.Size = new System.Drawing.Size(891, 221);
             this.panel7.TabIndex = 15;
             // 
             // label10
@@ -256,7 +258,7 @@
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Image = ((System.Drawing.Image)(resources.GetObject("label10.Image")));
             this.label10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label10.Location = new System.Drawing.Point(52, 463);
+            this.label10.Location = new System.Drawing.Point(52, 455);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(186, 31);
             this.label10.TabIndex = 0;
@@ -265,7 +267,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox1.Location = new System.Drawing.Point(58, 500);
+            this.pictureBox1.Location = new System.Drawing.Point(59, 488);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(888, 2);
             this.pictureBox1.TabIndex = 16;
@@ -274,11 +276,16 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox2.Location = new System.Drawing.Point(57, 346);
+            this.pictureBox2.Location = new System.Drawing.Point(434, 346);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(888, 2);
+            this.pictureBox2.Size = new System.Drawing.Size(510, 2);
             this.pictureBox2.TabIndex = 17;
             this.pictureBox2.TabStop = false;
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 5;
+            this.bunifuElipse1.TargetControl = this;
             // 
             // ProductDetail
             // 
@@ -289,8 +296,8 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.panel7);
-            this.Controls.Add(this.bunifuThinButton22);
-            this.Controls.Add(this.bunifuThinButton21);
+            this.Controls.Add(this.btnAddwishlist);
+            this.Controls.Add(this.btnAddcart);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.label9);
@@ -301,11 +308,11 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelName);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ProductDetail";
             this.Text = "ProductDetail";
             this.panel1.ResumeLayout(false);
@@ -322,7 +329,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -333,11 +340,12 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton22;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnAddcart;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnAddwishlist;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }

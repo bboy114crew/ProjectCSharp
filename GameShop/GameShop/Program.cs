@@ -16,7 +16,11 @@ namespace GameShop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
             Application.Run(new ProductDetail());
+=======
+            Application.Run(new Form1());
+>>>>>>> 4387227ed04a5b613ac5fcf7a5003c4020a6051b
         }
     }
 }
