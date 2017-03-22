@@ -13,10 +13,12 @@ namespace GameShop.DAL
         public List<Products> getByCategoryID()
         {
             SqlCommand command;
-            List<Products> cs = new List<Products>();
+            List<Products> ps = new List<Products>();
             SqlConnection connection = null;
             SqlDataReader data = null;
-            string sql = "SELECT [CategoryID], [CategoryName] FROM [Categories]";
+            string sql = "SELECT [ProductID], [ProductName], [Description], " +
+                         "[Price], [Sale], [CategoryID], [SupplierID], [PublishDate], " +
+                         "[Rating] FROM [Products] WHERE CategoryID = @param";
             try
             {
                 connection = DBContext.openConnection();
@@ -26,10 +28,12 @@ namespace GameShop.DAL
                 data = command.ExecuteReader();
                 while (data.Read())
                 {
-                    int id = Convert.ToInt16(data["CategoryID"]);
-                    string name = Convert.ToString(data["CategoryName"]);
-                    Categories c = new Categories(id, name);
-                    cs.Add(c);
+                    int id = Convert.ToInt16(data["ProductID"]);
+                    string name = Convert.ToString(data["ProductName"]);
+                    string des = Convert.ToString(data["Description"]);
+                    double price = Convert.ToDouble(data["Price"]);
+                    Products p = new Categories();
+                    ps.Add(p);
                 }
             }
             catch (Exception ex)
@@ -42,7 +46,7 @@ namespace GameShop.DAL
                 data.Close();
                 DBContext.closeConnection(connection);
             }
-            return cs;
+            return ps;
         }
     }
 }
