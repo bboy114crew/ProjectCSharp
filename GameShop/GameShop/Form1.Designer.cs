@@ -363,8 +363,8 @@
             this.bunifuMetroTextbox1.Name = "bunifuMetroTextbox1";
             this.bunifuMetroTextbox1.Size = new System.Drawing.Size(289, 33);
             this.bunifuMetroTextbox1.TabIndex = 0;
-            this.bunifuMetroTextbox1.Text = "bunifuMetroTextbox1";
             this.bunifuMetroTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bunifuMetroTextbox1.OnValueChanged += new System.EventHandler(this.bunifuMetroTextbox1_OnValueChanged);
             // 
             // pnContent
             // 
