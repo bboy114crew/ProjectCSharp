@@ -33,7 +33,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_ui_v1.52">
+<<<<<<< HEAD
       <HintPath>F:\Bunifu_ui_v1.52.dll</HintPath>
+=======
+      <HintPath>D:\Bunifu_ui_v1.52.dll</HintPath>
+>>>>>>> da77822ce39ac06bf5e8295a9e402a2c39ad6bcf
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -103,12 +107,21 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Debug\GameShop.vshost.exe" />
     <Content Include="obj\Debug\GameShop.csproj.FileListAbsolute.txt" />
   </ItemGroup>
+=======
+    <Content Include="bin\Debug\GameShop.vshost.exe" />
+    <Content Include="obj\Debug\GameShop.csproj.FileListAbsolute.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+>>>>>>> da77822ce39ac06bf5e8295a9e402a2c39ad6bcf
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

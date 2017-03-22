@@ -99,7 +99,7 @@
             this.label1.ForeColor = System.Drawing.Color.DarkRed;
             this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(113, 25);
+            this.label1.Location = new System.Drawing.Point(57, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(169, 51);
             this.label1.TabIndex = 6;
@@ -251,7 +251,7 @@
             this.panelBGRegister.Controls.Add(this.tbResgisterRepassword);
             this.panelBGRegister.Controls.Add(this.btnSubmitRegister);
             this.panelBGRegister.Controls.Add(this.tbRegisterUsername);
-            this.panelBGRegister.Location = new System.Drawing.Point(12, 303);
+            this.panelBGRegister.Location = new System.Drawing.Point(12, 173);
             this.panelBGRegister.Name = "panelBGRegister";
             this.panelBGRegister.Size = new System.Drawing.Size(394, 457);
             this.panelBGRegister.TabIndex = 11;
@@ -283,7 +283,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label2.Location = new System.Drawing.Point(66, 24);
+            this.label2.Location = new System.Drawing.Point(58, 32);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(224, 46);
             this.label2.TabIndex = 12;
