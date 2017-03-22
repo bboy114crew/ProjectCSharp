@@ -45,10 +45,10 @@
             this.pnSearch = new System.Windows.Forms.Panel();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuMetroTextbox1 = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
             this.pnContent = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pnShowProduct = new System.Windows.Forms.Panel();
+            this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
             this.pnUserInfo.SuspendLayout();
             this.pnControlBtnInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
@@ -73,7 +73,7 @@
             this.pnUserInfo.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnUserInfo.Location = new System.Drawing.Point(0, 33);
             this.pnUserInfo.Name = "pnUserInfo";
-            this.pnUserInfo.Size = new System.Drawing.Size(40, 1059);
+            this.pnUserInfo.Size = new System.Drawing.Size(40, 918);
             this.pnUserInfo.TabIndex = 0;
             // 
             // pnControlBtnInfo
@@ -366,6 +366,35 @@
             this.bunifuMetroTextbox1.Text = "bunifuMetroTextbox1";
             this.bunifuMetroTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
+            // pnContent
+            // 
+            this.pnContent.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pnContent.Controls.Add(this.groupBox1);
+            this.pnContent.Controls.Add(this.bunifuTileButton1);
+            this.pnContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnContent.Location = new System.Drawing.Point(40, 66);
+            this.pnContent.Name = "pnContent";
+            this.pnContent.Size = new System.Drawing.Size(997, 885);
+            this.pnContent.TabIndex = 3;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.pnShowProduct);
+            this.groupBox1.Location = new System.Drawing.Point(0, 366);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(997, 660);
+            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Games";
+            // 
+            // pnShowProduct
+            // 
+            this.pnShowProduct.AutoScroll = true;
+            this.pnShowProduct.Location = new System.Drawing.Point(0, 19);
+            this.pnShowProduct.Name = "pnShowProduct";
+            this.pnShowProduct.Size = new System.Drawing.Size(1021, 520);
+            this.pnShowProduct.TabIndex = 0;
+            // 
             // bunifuTileButton1
             // 
             this.bunifuTileButton1.BackColor = System.Drawing.Color.Transparent;
@@ -381,47 +410,18 @@
             this.bunifuTileButton1.ImageZoom = 50;
             this.bunifuTileButton1.LabelPosition = 41;
             this.bunifuTileButton1.LabelText = "Nier: Automata";
-            this.bunifuTileButton1.Location = new System.Drawing.Point(0, 6);
+            this.bunifuTileButton1.Location = new System.Drawing.Point(48, 6);
             this.bunifuTileButton1.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuTileButton1.Name = "bunifuTileButton1";
-            this.bunifuTileButton1.Size = new System.Drawing.Size(997, 472);
+            this.bunifuTileButton1.Size = new System.Drawing.Size(911, 351);
             this.bunifuTileButton1.TabIndex = 3;
-            // 
-            // pnContent
-            // 
-            this.pnContent.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pnContent.Controls.Add(this.groupBox1);
-            this.pnContent.Controls.Add(this.bunifuTileButton1);
-            this.pnContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnContent.Location = new System.Drawing.Point(40, 66);
-            this.pnContent.Name = "pnContent";
-            this.pnContent.Size = new System.Drawing.Size(997, 1026);
-            this.pnContent.TabIndex = 3;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.pnShowProduct);
-            this.groupBox1.Location = new System.Drawing.Point(0, 487);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(997, 539);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Games";
-            // 
-            // pnShowProduct
-            // 
-            this.pnShowProduct.AutoScroll = true;
-            this.pnShowProduct.Location = new System.Drawing.Point(0, 19);
-            this.pnShowProduct.Name = "pnShowProduct";
-            this.pnShowProduct.Size = new System.Drawing.Size(1021, 520);
-            this.pnShowProduct.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1037, 1092);
+            this.ClientSize = new System.Drawing.Size(1037, 951);
             this.Controls.Add(this.pnContent);
             this.Controls.Add(this.pnSearch);
             this.Controls.Add(this.pnUserInfo);
@@ -462,9 +462,9 @@
         private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox1;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
         private System.Windows.Forms.Panel pnContent;
-        private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel pnShowProduct;
+        private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton1;
     }
 }
 

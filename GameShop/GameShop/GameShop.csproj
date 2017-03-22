@@ -33,10 +33,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_ui_v1.52">
-<<<<<<< HEAD
-=======
-      <HintPath>F:\Bunifu_ui_v1.52.dll</HintPath>
->>>>>>> 9705a758577a1186b17e6f3f96ecf771a8c54f43
       <HintPath>D:\Bunifu_ui_v1.52.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -69,10 +65,7 @@
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Accounts.cs" />
-<<<<<<< HEAD
     <Compile Include="Model\Categories.cs" />
-=======
->>>>>>> 9705a758577a1186b17e6f3f96ecf771a8c54f43
     <Compile Include="Model\Products.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
@@ -113,26 +106,37 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Content Include="bin\Debug\GameShop.vshost.exe" />
     <Content Include="obj\Debug\GameShop.csproj.FileListAbsolute.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Image\ark\" />
+    <Folder Include="Image\avorion\" />
+    <Folder Include="Image\bf1\" />
+    <Folder Include="Image\capcom\" />
+    <Folder Include="Image\csgo\" />
+    <Folder Include="Image\dontstarve\" />
+    <Folder Include="Image\dota2\" />
+    <Folder Include="Image\ds3\" />
+    <Folder Include="Image\forhornor\" />
+    <Folder Include="Image\ghostrecon\" />
+    <Folder Include="Image\gta\" />
+    <Folder Include="Image\hollow\" />
+    <Folder Include="Image\horizon\" />
+    <Folder Include="Image\lol\" />
+    <Folder Include="Image\nier\" />
+    <Folder Include="Image\rocket\" />
+    <Folder Include="Image\sniper\" />
+    <Folder Include="Image\spore\" />
+    <Folder Include="Image\streetrouge\" />
+    <Folder Include="Image\tales\" />
+    <Folder Include="Image\teamfortress\" />
+    <Folder Include="Image\toukiden\" />
+    <Folder Include="Image\viking\" />
+    <Folder Include="Image\witcher\" />
+    <Folder Include="Image\zelda\" />
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
-=======
-    <Folder Include="obj\Debug\TempPE\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="bin\Debug\GameShop.vshost.exe" />
-    <Content Include="obj\Debug\GameShop.csproj.FileListAbsolute.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="bin\Debug\GameShop.vshost.exe" />
-    <Content Include="obj\Debug\GameShop.csproj.FileListAbsolute.txt" />
-  </ItemGroup>
-  <ItemGroup />
->>>>>>> 9705a758577a1186b17e6f3f96ecf771a8c54f43
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

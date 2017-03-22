@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +20,7 @@ namespace GameShop
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Console.WriteLine(folderImgPath());
             pnUserInfo.Width = 40;
             pnControlBtnInfo.Visible = false;
 
@@ -51,7 +53,7 @@ namespace GameShop
                     btn1.Size = new Size(192, 180);
                     btn1.Location = new Point(indexPl2, 0);
                     btn1.FlatAppearance.BorderSize = 0;
-                    Image myimage = new Bitmap(@"C:\Users\Jic\Desktop\project C#\nier\pic3.jpg");
+                    Image myimage = new Bitmap(@folderImgPath()+@"Image\nier\pic5.jpg");
                     btn1.BackgroundImage = myimage;
                     btn1.BackgroundImageLayout = ImageLayout.Stretch;
 
@@ -71,6 +73,13 @@ namespace GameShop
                 pnShowProduct.Controls.Add(pl1);
                 indexPl1 += 229;   
             }
+        }
+
+        public string folderImgPath()
+        {
+            string fullPath = System.IO.Directory.GetCurrentDirectory();
+            int index = fullPath.IndexOf("bin");
+            return fullPath.Substring(0, index);
         }
 
         private void bunifuImageButton2_Click(object sender, EventArgs e)
