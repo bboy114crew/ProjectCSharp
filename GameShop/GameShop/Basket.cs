@@ -17,6 +17,13 @@ namespace GameShop
         public Basket()
         {
             InitializeComponent();
+            dataGridView1.DataSource = SessionOrder.getOrders.GetOrderList;
+            float total = 0;
+            foreach (var item in SessionOrder.getOrders.GetOrderList)
+            {
+                total += item.Quantity * item.UnitPrice;
+            }
+            lbTotal.Text = total.ToString();
         }
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
