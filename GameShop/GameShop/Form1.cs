@@ -76,6 +76,7 @@ namespace GameShop
         {
             Button btn = sender as Button;
             ProductDetail form = new ProductDetail();
+            SessionOrder.productId = Convert.ToInt16(btn.Name);
             form.Show();
         }
 

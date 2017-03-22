@@ -81,12 +81,8 @@ namespace GameShop.DAL
                     string spID = data["CompanyName"].ToString();
                     DateTime date = Convert.ToDateTime(data["PublishDate"]);
                     int rate = Convert.ToInt16(data["Rating"]);
-<<<<<<< HEAD
+
                     p = new Products(id, name, des, price, sale, date, rate, new Categories(1, cateID), new Suppliers(1, spID));
-=======
-                    Products p = new Products(id, name, des, price, sale, date, rate, new Categories(cateID, ""), new Suppliers(spID, ""));
-                    ps.Add(p);
->>>>>>> be01c300867cb704c5103a15b99ed8a7c407064c
                 }
             }
             catch (Exception ex)

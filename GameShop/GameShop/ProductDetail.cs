@@ -22,8 +22,10 @@ namespace GameShop
             //
         }
 
+        private int count = 0;
         private void btnAddcart_Click(object sender, EventArgs e)
         {
+
             if (SessionOrder.user.Equals(""))
             {
                 Login formLogin = new Login();
@@ -39,14 +41,17 @@ namespace GameShop
                 {
                     if(ol.ProductID == SessionOrder.productId)
                     {
+                        count = ol.Quantity;
                         ol.Quantity += 1;
+                        
                     }else
                     {
                         SessionOrder.getOrders.GetOrderList.Add(new OrderDetail(0, SessionOrder.productId, 1, 12));
-                        label1.Text = SessionOrder.getOrders.GetOrderList.Count + "";
+                        lbCount.Text = SessionOrder.getOrders.GetOrderList.Count + "";
                     }
                 }
             }
+            lbCount.Text = "(" + count.ToString() + ") " + "Products";
 
         }
         private void ProductDetail_Load(object sender, EventArgs e)
@@ -54,13 +59,13 @@ namespace GameShop
             ProductContext db = new ProductContext();
             ImageContext im = new ImageContext();
             Products p = db.getByID(SessionOrder.productId);
-            Image myimage = new Bitmap(@"C:\Users\TD Chien\Pictures\" + @im.getByProductID1(SessionOrder.productId)[0].url);
+            Image myimage = new Bitmap(@"C:\Users\Jic\Desktop\" + @im.getByProductID1(SessionOrder.productId)[0].url);
             panelUrl1.BackgroundImage = myimage;
             panelUrl1.BackgroundImageLayout = ImageLayout.Stretch;
-            Image myimage1 = new Bitmap(@"C:\Users\TD Chien\Pictures\" + @im.getByProductID1(SessionOrder.productId)[1].url);
+            Image myimage1 = new Bitmap(@"C:\Users\Jic\Desktop\" + @im.getByProductID1(SessionOrder.productId)[1].url);
             panelUrl2.BackgroundImage = myimage1;
             panelUrl2.BackgroundImageLayout = ImageLayout.Stretch;
-            Image myimage2 = new Bitmap(@"C:\Users\TD Chien\Pictures\" + @im.getByProductID1(SessionOrder.productId)[2].url);
+            Image myimage2 = new Bitmap(@"C:\Users\Jic\Desktop\" + @im.getByProductID1(SessionOrder.productId)[2].url);
             panelUrl3.BackgroundImage = myimage2;
             panelUrl3.BackgroundImageLayout = ImageLayout.Stretch;
 
@@ -95,10 +100,16 @@ namespace GameShop
             form.Show();
         }
 
-        private void btnWishlist_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
             Basket form = new Basket();
             form.Show();
+
         }
     }
 }

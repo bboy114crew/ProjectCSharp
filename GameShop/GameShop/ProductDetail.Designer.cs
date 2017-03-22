@@ -46,20 +46,19 @@
             this.panelUrl2 = new System.Windows.Forms.Panel();
             this.panelUrl3 = new System.Windows.Forms.Panel();
             this.btnAddcart = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btnAddwishlist = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.labelDes = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.labelUsername = new System.Windows.Forms.Label();
-            this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
-            this.btnWishlist = new Bunifu.Framework.UI.BunifuTileButton();
-            this.label1 = new System.Windows.Forms.Label();
             this.labelPrice = new System.Windows.Forms.Label();
             this.labelCategory = new System.Windows.Forms.Label();
             this.labelSup = new System.Windows.Forms.Label();
-            this.labelDes = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.lbCount = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -68,8 +67,9 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnWishlist);
-            this.panel1.Controls.Add(this.bunifuTileButton1);
+            this.panel1.Controls.Add(this.lbCount);
+            this.panel1.Controls.Add(this.bunifuFlatButton1);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -234,32 +234,6 @@
             this.btnAddcart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAddcart.Click += new System.EventHandler(this.btnAddcart_Click);
             // 
-            // btnAddwishlist
-            // 
-            this.btnAddwishlist.ActiveBorderThickness = 1;
-            this.btnAddwishlist.ActiveCornerRadius = 20;
-            this.btnAddwishlist.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.btnAddwishlist.ActiveForecolor = System.Drawing.Color.White;
-            this.btnAddwishlist.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnAddwishlist.BackColor = System.Drawing.SystemColors.Control;
-            this.btnAddwishlist.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddwishlist.BackgroundImage")));
-            this.btnAddwishlist.ButtonText = "Add wishlist";
-            this.btnAddwishlist.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddwishlist.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddwishlist.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnAddwishlist.IdleBorderThickness = 1;
-            this.btnAddwishlist.IdleCornerRadius = 20;
-            this.btnAddwishlist.IdleFillColor = System.Drawing.Color.White;
-            this.btnAddwishlist.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.btnAddwishlist.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnAddwishlist.Location = new System.Drawing.Point(719, 367);
-            this.btnAddwishlist.Margin = new System.Windows.Forms.Padding(5);
-            this.btnAddwishlist.Name = "btnAddwishlist";
-            this.btnAddwishlist.Size = new System.Drawing.Size(181, 51);
-            this.btnAddwishlist.TabIndex = 14;
-            this.btnAddwishlist.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAddwishlist.Click += new System.EventHandler(this.btnAddwishlist_Click);
-            // 
             // panel7
             // 
             this.panel7.Controls.Add(this.labelDes);
@@ -267,6 +241,16 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(891, 221);
             this.panel7.TabIndex = 15;
+            // 
+            // labelDes
+            // 
+            this.labelDes.AutoSize = true;
+            this.labelDes.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDes.Location = new System.Drawing.Point(54, 33);
+            this.labelDes.Name = "labelDes";
+            this.labelDes.Size = new System.Drawing.Size(74, 29);
+            this.labelDes.TabIndex = 21;
+            this.labelDes.Text = "Price";
             // 
             // label10
             // 
@@ -312,55 +296,6 @@
             this.labelUsername.TabIndex = 18;
             this.labelUsername.Visible = false;
             // 
-            // bunifuTileButton1
-            // 
-            this.bunifuTileButton1.BackColor = System.Drawing.Color.SeaGreen;
-            this.bunifuTileButton1.color = System.Drawing.Color.SeaGreen;
-            this.bunifuTileButton1.colorActive = System.Drawing.Color.MediumSeaGreen;
-            this.bunifuTileButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTileButton1.Font = new System.Drawing.Font("Century Gothic", 15.75F);
-            this.bunifuTileButton1.ForeColor = System.Drawing.Color.White;
-            this.bunifuTileButton1.Image = null;
-            this.bunifuTileButton1.ImagePosition = 20;
-            this.bunifuTileButton1.ImageZoom = 50;
-            this.bunifuTileButton1.LabelPosition = 41;
-            this.bunifuTileButton1.LabelText = "";
-            this.bunifuTileButton1.Location = new System.Drawing.Point(846, 2);
-            this.bunifuTileButton1.Margin = new System.Windows.Forms.Padding(6);
-            this.bunifuTileButton1.Name = "bunifuTileButton1";
-            this.bunifuTileButton1.Size = new System.Drawing.Size(101, 38);
-            this.bunifuTileButton1.TabIndex = 19;
-            this.bunifuTileButton1.Click += new System.EventHandler(this.bunifuTileButton1_Click);
-            // 
-            // btnWishlist
-            // 
-            this.btnWishlist.BackColor = System.Drawing.Color.SeaGreen;
-            this.btnWishlist.color = System.Drawing.Color.SeaGreen;
-            this.btnWishlist.colorActive = System.Drawing.Color.MediumSeaGreen;
-            this.btnWishlist.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnWishlist.Font = new System.Drawing.Font("Century Gothic", 15.75F);
-            this.btnWishlist.ForeColor = System.Drawing.Color.White;
-            this.btnWishlist.Image = null;
-            this.btnWishlist.ImagePosition = 20;
-            this.btnWishlist.ImageZoom = 50;
-            this.btnWishlist.LabelPosition = 41;
-            this.btnWishlist.LabelText = "";
-            this.btnWishlist.Location = new System.Drawing.Point(733, 2);
-            this.btnWishlist.Margin = new System.Windows.Forms.Padding(6);
-            this.btnWishlist.Name = "btnWishlist";
-            this.btnWishlist.Size = new System.Drawing.Size(101, 38);
-            this.btnWishlist.TabIndex = 20;
-            this.btnWishlist.Click += new System.EventHandler(this.btnWishlist_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(887, 257);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(13, 13);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "0";
-            // 
             // labelPrice
             // 
             this.labelPrice.AutoSize = true;
@@ -388,15 +323,62 @@
             this.labelSup.Size = new System.Drawing.Size(0, 29);
             this.labelSup.TabIndex = 22;
             // 
-            // labelDes
+            // button1
             // 
-            this.labelDes.AutoSize = true;
-            this.labelDes.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDes.Location = new System.Drawing.Point(54, 33);
-            this.labelDes.Name = "labelDes";
-            this.labelDes.Size = new System.Drawing.Size(74, 29);
-            this.labelDes.TabIndex = 21;
-            this.labelDes.Text = "Price";
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(961, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(25, 25);
+            this.button1.TabIndex = 21;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // bunifuFlatButton1
+            // 
+            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton1.BorderRadius = 0;
+            this.bunifuFlatButton1.ButtonText = "Your Basket";
+            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton1.Iconimage")));
+            this.bunifuFlatButton1.Iconimage_right = null;
+            this.bunifuFlatButton1.Iconimage_right_Selected = null;
+            this.bunifuFlatButton1.Iconimage_Selected = null;
+            this.bunifuFlatButton1.IconMarginLeft = 0;
+            this.bunifuFlatButton1.IconMarginRight = 0;
+            this.bunifuFlatButton1.IconRightVisible = true;
+            this.bunifuFlatButton1.IconRightZoom = 0D;
+            this.bunifuFlatButton1.IconVisible = true;
+            this.bunifuFlatButton1.IconZoom = 80D;
+            this.bunifuFlatButton1.IsTab = false;
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(640, 3);
+            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
+            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton1.selected = false;
+            this.bunifuFlatButton1.Size = new System.Drawing.Size(136, 37);
+            this.bunifuFlatButton1.TabIndex = 22;
+            this.bunifuFlatButton1.Text = "Your Basket";
+            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.Black;
+            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
+            // 
+            // lbCount
+            // 
+            this.lbCount.AutoSize = true;
+            this.lbCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCount.Location = new System.Drawing.Point(793, 13);
+            this.lbCount.Name = "lbCount";
+            this.lbCount.Size = new System.Drawing.Size(86, 17);
+            this.lbCount.TabIndex = 23;
+            this.lbCount.Text = "(0) Products";
             // 
             // ProductDetail
             // 
@@ -406,13 +388,11 @@
             this.Controls.Add(this.labelSup);
             this.Controls.Add(this.labelCategory);
             this.Controls.Add(this.labelPrice);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.labelUsername);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.panel7);
-            this.Controls.Add(this.btnAddwishlist);
             this.Controls.Add(this.btnAddcart);
             this.Controls.Add(this.panelUrl3);
             this.Controls.Add(this.panelUrl2);
@@ -434,6 +414,7 @@
             this.Text = "ProductDetail";
             this.Load += new System.EventHandler(this.ProductDetail_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -461,19 +442,18 @@
         private System.Windows.Forms.Panel panelUrl2;
         private System.Windows.Forms.Panel panelUrl3;
         private Bunifu.Framework.UI.BunifuThinButton2 btnAddcart;
-        private Bunifu.Framework.UI.BunifuThinButton2 btnAddwishlist;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Label labelUsername;
-        private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton1;
-        private Bunifu.Framework.UI.BunifuTileButton btnWishlist;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelDes;
         private System.Windows.Forms.Label labelSup;
         private System.Windows.Forms.Label labelCategory;
         private System.Windows.Forms.Label labelPrice;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lbCount;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
     }
 }
