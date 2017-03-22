@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GameShop.DAL;
+using GameShop.Model;
 
 namespace GameShop
 {
@@ -20,16 +22,20 @@ namespace GameShop
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Console.WriteLine(folderImgPath());
+            CategoryContext categoryContext = new CategoryContext();
+            List<Categories> categorieses = categoryContext.getAll();
+            
+
+
             pnUserInfo.Width = 40;
             pnControlBtnInfo.Visible = false;
 
             int indexPl1 = 0;
            
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < categorieses.Count; i++)
             {
                 Label lb = new Label();
-                lb.Text = "Category";
+                lb.Text = categorieses[i].name;
                 lb.Size = new Size(49, 13);
                 lb.Location = new Point(6, 9);
 
@@ -53,7 +59,8 @@ namespace GameShop
                     btn1.Size = new Size(192, 180);
                     btn1.Location = new Point(indexPl2, 0);
                     btn1.FlatAppearance.BorderSize = 0;
-                    Image myimage = new Bitmap(@folderImgPath()+@"Image\nier\pic5.jpg");
+                    //Image myimage = new Bitmap(@folderImgPath()+@"Image\nier\pic5.jpg");
+                    Image myimage = new Bitmap(@"C:\Users\Jic\Desktop\Image\ds3\pic1.jpg");
                     btn1.BackgroundImage = myimage;
                     btn1.BackgroundImageLayout = ImageLayout.Stretch;
 
