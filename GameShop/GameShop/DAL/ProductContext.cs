@@ -83,7 +83,7 @@ namespace GameShop.DAL
                     int spID = Convert.ToInt16(data["SupplierID"]);
                     DateTime date = Convert.ToDateTime(data["PublishDate"]);
                     int rate = Convert.ToInt16(data["Rating"]);
-                    Products p = new Products(id, name, des, price, sale, date, rate, new Categories(1, ""), new Suppliers(1, ""));
+                    Products p = new Products(id, name, des, price, sale, date, rate, new Categories(cateID, ""), new Suppliers(spID, ""));
                     ps.Add(p);
                 }
             }
@@ -98,6 +98,61 @@ namespace GameShop.DAL
                 DBContext.closeConnection(connection);
             }
             return ps;
+        }
+
+        public Dictionary<object, string> searchProduct(string search)
+        {
+            SqlCommand command;
+            Dictionary<object, string> dict = new Dictionary<object, string>();
+            SqlConnection connection = null;
+            SqlDataReader data = null;
+            string sql = "SELECT [ProductID], [ProductName], [Description], " +
+                         "[Price], [Sale], p.SupplierID, c.CategoryID, c.CategoryName, s.CompanyName, " +
+                         "[PublishDate], [Rating] FROM [Products] p JOIN Categories c ON p.CategoryID = c.CategoryID " +
+                         "JOIN Suppliers s ON s.SupplierID = p.SupplierID " +
+                         "WHERE p.ProductName LIKE '%'+@param1+'%' OR c.CategoryName LIKE '%'+@param2+'%' OR s.CompanyName LIKE '%'+@param3+'%'";
+            try
+            {
+                connection = DBContext.openConnection();
+                command = connection.CreateCommand();
+                command.CommandType = System.Data.CommandType.Text;
+                command.CommandText = sql;
+                command.Parameters.AddWithValue("@param1", search);
+                command.Parameters.AddWithValue("@param2", search);
+                command.Parameters.AddWithValue("@param3", search);
+                data = command.ExecuteReader();
+                while (data.Read())
+                {
+                    int id = Convert.ToInt16(data["ProductID"]);
+                    string name = Convert.ToString(data["ProductName"]);
+                    string des = Convert.ToString(data["Description"]);
+                    double price = Convert.ToDouble(data["Price"]);
+                    int sale = Convert.ToInt16(data["Sale"]);
+                    int cateID = Convert.ToInt16(data["CategoryID"]);
+                    int spID = Convert.ToInt16(data["SupplierID"]);
+                    string cateName = Convert.ToString(data["CategoryName"]);
+                    string spName = Convert.ToString(data["CompanyName"]);
+                    DateTime date = Convert.ToDateTime(data["PublishDate"]);
+                    int rate = Convert.ToInt16(data["Rating"]);
+                    Products p = new Products(id, name, des, price, sale, date, rate, new Categories(cateID, cateName), new Suppliers(spID, spName));
+                    Categories c = new Categories(cateID, cateName);
+                    Suppliers s = new Suppliers(spID, spName);
+                    dict.Add(p, "product");
+                    dict.Add(c, "category");
+                    dict.Add(s, "supplier");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                throw;
+            }
+            finally
+            {
+                data.Close();
+                DBContext.closeConnection(connection);
+            }
+            return dict;
         }
     }
 }

@@ -26,17 +26,17 @@ namespace GameShop
             List<Categories> categorieses = categoryContext.getAll();
             ProductContext productContext = new ProductContext();
             ImageContext imageContext = new ImageContext();
-            
+
             pnUserInfo.Width = 40;
             pnControlBtnInfo.Visible = false;
 
             int indexPl1 = 0;
-           
+
             for (int i = 0; i < categorieses.Count; i++)
             {
-                
+
                 List<Products> productses = productContext.getByCategoryID(categorieses[i].id);
-       
+
                 Panel pl2 = new Panel();
                 pl2.BackColor = Color.White;
                 pl2.Size = new Size(985, 172);
@@ -60,14 +60,13 @@ namespace GameShop
                 pl1.Controls.Add(pl2);
 
                 pnShowProduct.Controls.Add(pl1);
-                indexPl1 += 229;   
+                indexPl1 += 229;
             }
         }
 
         public void showAllBtn_Click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
-         
         }
 
         public void btnGame_Click(object sender, EventArgs e)
@@ -77,7 +76,7 @@ namespace GameShop
             form.Show();
         }
 
-        public Label lbCateName (string name)
+        public Label lbCateName(string name)
         {
             Label lb = new Label();
             lb.Text = name;
@@ -136,7 +135,7 @@ namespace GameShop
         private void bunifuImageButton2_Click(object sender, EventArgs e)
         {
             if (pnUserInfo.Width == 40)
-            {      
+            {
                 pnUserInfo.Width = 340;
                 pnControlBtnInfo.Visible = true;
             }
@@ -154,7 +153,10 @@ namespace GameShop
 
         private void bunifuMetroTextbox1_OnValueChanged(object sender, EventArgs e)
         {
-            pnShowProduct.Controls.Clear();
+        }
+
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        {
         }
     }
 }
