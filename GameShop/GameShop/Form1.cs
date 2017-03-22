@@ -25,6 +25,7 @@ namespace GameShop
             CategoryContext categoryContext = new CategoryContext();
             List<Categories> categorieses = categoryContext.getAll();
             ProductContext productContext = new ProductContext();
+            ImageContext imageContext = new ImageContext();
             
 
 
@@ -52,23 +53,32 @@ namespace GameShop
                 pl2.Location = new Point(6, 37);
 
                 List<Products> productses = productContext.getByCategoryID(categorieses[i].id);
+                Console.WriteLine(productses[i].id);
 
                 int indexPl2 = 1;
                 for (int j = 0; j < productses.Count; j++)
                 {
+                    Images img = imageContext.getByProductID(productses[j].id);
+
+                    Console.WriteLine(img.url);
+
+
                     Button btn1 = new Button();
                     btn1.FlatStyle = FlatStyle.Flat;
-                    btn1.Text += "button";
-                    btn1.Size = new Size(192, 180);
+                    btn1.Text = productses[j].name;
+                    btn1.ForeColor = Color.White;
+                    btn1.TextAlign = ContentAlignment.BottomCenter;
+                    btn1.Size = new Size(192, 169);
                     btn1.Location = new Point(indexPl2, 0);
                     btn1.FlatAppearance.BorderSize = 0;
                     //Image myimage = new Bitmap(@folderImgPath()+@"Image\nier\pic5.jpg");
-                    Image myimage = new Bitmap(@"C:\Users\Jic\Desktop\Image\ds3\pic1.jpg");
+                    Image myimage = new Bitmap(@"C:\Users\Jic\Desktop\" + @img.url);
                     btn1.BackgroundImage = myimage;
                     btn1.BackgroundImageLayout = ImageLayout.Stretch;
 
                     pl2.Controls.Add(btn1);
                     indexPl2 += 198;
+             
                 }
 
 
