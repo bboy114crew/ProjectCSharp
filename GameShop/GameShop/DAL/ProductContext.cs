@@ -32,7 +32,7 @@ namespace GameShop.DAL
                     string name = Convert.ToString(data["ProductName"]);
                     string des = Convert.ToString(data["Description"]);
                     double price = Convert.ToDouble(data["Price"]);
-                    Products p = new Categories();
+                    Products p = new Products();
                     ps.Add(p);
                 }
             }
