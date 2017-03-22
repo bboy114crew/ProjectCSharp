@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace GameShop.Model
 {
-    class Categories
+    class Suppliers
     {
         public int id { get; set; }
-        public int name { get; set; }
+        public string name { get; set; }
 
-        public Categories()
+        public Suppliers()
         {
             
         }
 
-        public Categories(int id, int name)
+        public Suppliers(int id, string name)
         {
             this.id = id;
             this.name = name;
