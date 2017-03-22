@@ -14,13 +14,12 @@ namespace GameShop
 {
     public partial class ProductDetail : Form
     {
-        private int pid;
 
-        public ProductDetail(int id)
+        public ProductDetail()
         {
             InitializeComponent();
             labelUsername.Text = SessionOrder.user;
-
+            //
         }
 
         private void btnAddcart_Click(object sender, EventArgs e)
@@ -44,16 +43,33 @@ namespace GameShop
                     }else
                     {
                         SessionOrder.getOrders.GetOrderList.Add(new OrderDetail(0, SessionOrder.productId, 1, 12));
+                        label1.Text = SessionOrder.getOrders.GetOrderList.Count + "";
                     }
                 }
             }
 
         }
-
         private void ProductDetail_Load(object sender, EventArgs e)
         {
             ProductContext db = new ProductContext();
-            db.getByID(pid);
+            ImageContext im = new ImageContext();
+            Products p = db.getByID(SessionOrder.productId);
+            Image myimage = new Bitmap(@"C:\Users\TD Chien\Pictures\" + @im.getByProductID1(SessionOrder.productId)[0].url);
+            panelUrl1.BackgroundImage = myimage;
+            panelUrl1.BackgroundImageLayout = ImageLayout.Stretch;
+            Image myimage1 = new Bitmap(@"C:\Users\TD Chien\Pictures\" + @im.getByProductID1(SessionOrder.productId)[1].url);
+            panelUrl2.BackgroundImage = myimage1;
+            panelUrl2.BackgroundImageLayout = ImageLayout.Stretch;
+            Image myimage2 = new Bitmap(@"C:\Users\TD Chien\Pictures\" + @im.getByProductID1(SessionOrder.productId)[2].url);
+            panelUrl3.BackgroundImage = myimage2;
+            panelUrl3.BackgroundImageLayout = ImageLayout.Stretch;
+
+            labelName.Text = p.name;
+            labelPrice.Text = p.price+"$";
+            labelSup.Text = p.suppliers.name;
+            labelCategory.Text = p.categories.name;
+            labelDes.Text = p.des;
+
         }
 
 

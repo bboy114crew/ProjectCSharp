@@ -73,7 +73,7 @@ namespace GameShop
         public void btnGame_Click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
-            ProductDetail form = new ProductDetail(Convert.ToInt16(btn.Name));
+            ProductDetail form = new ProductDetail();
             form.Show();
         }
 

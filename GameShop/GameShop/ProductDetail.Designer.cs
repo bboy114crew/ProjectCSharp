@@ -56,7 +56,12 @@
             this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
             this.btnWishlist = new Bunifu.Framework.UI.BunifuTileButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.labelPrice = new System.Windows.Forms.Label();
+            this.labelCategory = new System.Windows.Forms.Label();
+            this.labelSup = new System.Windows.Forms.Label();
+            this.labelDes = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -110,9 +115,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(463, 145);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 29);
+            this.label2.Size = new System.Drawing.Size(88, 29);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Price";
+            this.label2.Text = "Price :";
             // 
             // label3
             // 
@@ -120,9 +125,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(463, 190);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(118, 29);
+            this.label3.Size = new System.Drawing.Size(132, 29);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Category";
+            this.label3.Text = "Category :";
             // 
             // label4
             // 
@@ -130,9 +135,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(462, 241);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 29);
+            this.label4.Size = new System.Drawing.Size(126, 29);
             this.label4.TabIndex = 5;
-            this.label4.Text = "Supplier";
+            this.label4.Text = "Supplier :";
             // 
             // label5
             // 
@@ -257,6 +262,7 @@
             // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.labelDes);
             this.panel7.Location = new System.Drawing.Point(58, 496);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(891, 221);
@@ -349,17 +355,57 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(733, 179);
+            this.label1.Location = new System.Drawing.Point(887, 257);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(13, 13);
             this.label1.TabIndex = 19;
             this.label1.Text = "0";
+            // 
+            // labelPrice
+            // 
+            this.labelPrice.AutoSize = true;
+            this.labelPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPrice.Location = new System.Drawing.Point(658, 145);
+            this.labelPrice.Name = "labelPrice";
+            this.labelPrice.Size = new System.Drawing.Size(0, 29);
+            this.labelPrice.TabIndex = 20;
+            // 
+            // labelCategory
+            // 
+            this.labelCategory.AutoSize = true;
+            this.labelCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCategory.Location = new System.Drawing.Point(658, 190);
+            this.labelCategory.Name = "labelCategory";
+            this.labelCategory.Size = new System.Drawing.Size(0, 29);
+            this.labelCategory.TabIndex = 21;
+            // 
+            // labelSup
+            // 
+            this.labelSup.AutoSize = true;
+            this.labelSup.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSup.Location = new System.Drawing.Point(658, 241);
+            this.labelSup.Name = "labelSup";
+            this.labelSup.Size = new System.Drawing.Size(0, 29);
+            this.labelSup.TabIndex = 22;
+            // 
+            // labelDes
+            // 
+            this.labelDes.AutoSize = true;
+            this.labelDes.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDes.Location = new System.Drawing.Point(54, 33);
+            this.labelDes.Name = "labelDes";
+            this.labelDes.Size = new System.Drawing.Size(74, 29);
+            this.labelDes.TabIndex = 21;
+            this.labelDes.Text = "Price";
             // 
             // ProductDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(991, 729);
+            this.Controls.Add(this.labelSup);
+            this.Controls.Add(this.labelCategory);
+            this.Controls.Add(this.labelPrice);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelUsername);
             this.Controls.Add(this.pictureBox2);
@@ -388,6 +434,8 @@
             this.Text = "ProductDetail";
             this.Load += new System.EventHandler(this.ProductDetail_Load);
             this.panel1.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -423,5 +471,9 @@
         private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton1;
         private Bunifu.Framework.UI.BunifuTileButton btnWishlist;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelDes;
+        private System.Windows.Forms.Label labelSup;
+        private System.Windows.Forms.Label labelCategory;
+        private System.Windows.Forms.Label labelPrice;
     }
 }

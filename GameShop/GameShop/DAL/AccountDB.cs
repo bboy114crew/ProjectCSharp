@@ -61,20 +61,20 @@ namespace GameShop.DAL
             com.Parameters.Add(p3);
             com.Parameters.Add(p4);
             com.ExecuteNonQuery();
-            int cid = Convert.ToUInt16(com.ExecuteScalar());
+            int cid = Convert.ToInt32(com.ExecuteScalar());
             con.Close();
             registerAccount(username, password,cid);
 
         }
         static public void registerAccount(string username,string password,int cid)
         {
-            string sql = "INSERT INTO [Accounts]([Username],[Password],[CustomerID]) VALUES ( @username, @password,@cusid)";
+            string sql = "INSERT INTO [Accounts]( [Username] , [Password], [CustomerID] ) VALUES ( @username, @password , @cusid ) ";
             SqlConnection con = new SqlConnection(DBContext.url());
             con.Open();
             SqlCommand com1 = new SqlCommand(sql, con);
             SqlParameter p4 = new SqlParameter("@username", username);
             SqlParameter p5 = new SqlParameter("@password", password);
-            SqlParameter p6 = new SqlParameter("@cusid", cid);
+            SqlParameter p6 = new SqlParameter("@cusid", 6);
             com1.Parameters.Add(p4);
             com1.Parameters.Add(p5);
             com1.Parameters.Add(p6);
