@@ -1,4 +1,6 @@
-﻿using System;
+﻿using GameShop.DAL;
+using GameShop.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,15 @@ namespace GameShop
         public Basket()
         {
             InitializeComponent();
+        }
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        {
+            int id = CheckoutDB.insert(CustomerDB.getCustomerID(SessionOrder.user));
+            foreach(OrderDetail o in SessionOrder.getOrders.GetOrderList)
+            {
+                CheckoutDB.insertOrderDetail(id, SessionOrder.productId, o.Quantity, o.UnitPrice * o.Quantity);
+            }
+            SessionOrder.getOrders = new Order();
         }
     }
 }

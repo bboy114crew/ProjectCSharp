@@ -1,4 +1,5 @@
 ﻿using GameShop.DAL;
+using GameShop.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -58,7 +59,7 @@ namespace GameShop
                 else
                 {
                     Label lb = (Label)formdetail.Controls["labelUsername"];
-                    lb.Text = tbUsername.Text;
+                    SessionOrder.user = tbUsername.Text;
                     this.Close();
                 }
             }else
