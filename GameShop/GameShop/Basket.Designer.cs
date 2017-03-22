@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // bunifuThinButton21
@@ -56,20 +57,34 @@
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(163, 48);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(212, 39);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Your Basket";
+            // 
             // Basket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(870, 651);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.bunifuThinButton21);
             this.Name = "Basket";
             this.Text = "Basket";
+            this.Load += new System.EventHandler(this.Basket_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
+        private System.Windows.Forms.Label label1;
     }
 }

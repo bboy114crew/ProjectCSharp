@@ -44,5 +44,40 @@ namespace GameShop.DAL
             }
             return img;
         }
+        public List<Images> getByProductID1(int pid)
+        {
+            SqlCommand command;
+            List<Images> list = new List<Images>();
+            SqlConnection connection = null;
+            SqlDataReader data = null;
+            string sql = "SELECT TOP(3) [ImageID], [ProductID], [ImageURL] FROM [Images] WHERE ProductID = @param";
+            try
+            {
+                connection = DBContext.openConnection();
+                command = connection.CreateCommand();
+                command.CommandType = System.Data.CommandType.Text;
+                command.CommandText = sql;
+                command.Parameters.AddWithValue("@param", pid);
+                data = command.ExecuteReader();
+                while (data.Read())
+                {
+                    int id = Convert.ToInt16(data["ImageID"]);
+                    string url = Convert.ToString(data["ImageURL"]);
+                    Images img = new Images(id, null, url);
+                    list.Add(img);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                throw;
+            }
+            finally
+            {
+                data.Close();
+                DBContext.closeConnection(connection);
+            }
+            return list;
+        }
     }
 }
