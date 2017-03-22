@@ -12,7 +12,7 @@ namespace GameShop.Model
         public string name { get; set; }
         public string des { get; set; }
         public double price { get; set; }
-        public float sale { get; set; }
+        public int sale { get; set; }
         public DateTime publishDate { get; set; }
         public int rating { get; set; }
         public Categories categories { get; set; }
@@ -23,7 +23,7 @@ namespace GameShop.Model
             
         }
 
-        public Products(int id, string name, string des, double price, float sale, DateTime publishDate, int rating, Categories categories, Suppliers suppliers)
+        public Products(int id, string name, string des, double price, int sale, DateTime publishDate, int rating, Categories categories, Suppliers suppliers)
         {
             this.id = id;
             this.name = name;

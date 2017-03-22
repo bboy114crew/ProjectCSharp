@@ -14,7 +14,9 @@ namespace GameShop
 {
     public partial class ProductDetail : Form
     {
-        public ProductDetail()
+        private int pid;
+
+        public ProductDetail(int id)
         {
             InitializeComponent();
             labelUsername.Text = SessionOrder.user;
@@ -45,8 +47,16 @@ namespace GameShop
                     }
                 }
             }
-            
+
         }
+
+        private void ProductDetail_Load(object sender, EventArgs e)
+        {
+            ProductContext db = new ProductContext();
+            db.getByID(pid);
+        }
+
+
 
         private void btnAddwishlist_Click(object sender, EventArgs e)
         {
@@ -62,12 +72,6 @@ namespace GameShop
             }
         }
 
-        private void ProductDetail_Load(object sender, EventArgs e)
-        {
-            ProductContext db = new ProductContext();
-            db.getByID(SessionOrder.productId);
-            
-        }
 
         private void bunifuTileButton1_Click(object sender, EventArgs e)
         {
