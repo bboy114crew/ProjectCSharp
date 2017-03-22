@@ -33,7 +33,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.panelUrl1 = new System.Windows.Forms.Panel();
             this.labelName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,8 +43,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.panelUrl2 = new System.Windows.Forms.Panel();
+            this.panelUrl3 = new System.Windows.Forms.Panel();
             this.btnAddcart = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnAddwishlist = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -81,12 +81,12 @@
             this.panel3.Size = new System.Drawing.Size(200, 100);
             this.panel3.TabIndex = 1;
             // 
-            // panel4
+            // panelUrl1
             // 
-            this.panel4.Location = new System.Drawing.Point(58, 50);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(343, 284);
-            this.panel4.TabIndex = 1;
+            this.panelUrl1.Location = new System.Drawing.Point(58, 50);
+            this.panelUrl1.Name = "panelUrl1";
+            this.panelUrl1.Size = new System.Drawing.Size(343, 284);
+            this.panelUrl1.TabIndex = 1;
             // 
             // labelName
             // 
@@ -183,19 +183,19 @@
             this.label9.TabIndex = 10;
             this.label9.Text = "   ";
             // 
-            // panel5
+            // panelUrl2
             // 
-            this.panel5.Location = new System.Drawing.Point(58, 346);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(142, 100);
-            this.panel5.TabIndex = 11;
+            this.panelUrl2.Location = new System.Drawing.Point(58, 346);
+            this.panelUrl2.Name = "panelUrl2";
+            this.panelUrl2.Size = new System.Drawing.Size(142, 100);
+            this.panelUrl2.TabIndex = 11;
             // 
-            // panel6
+            // panelUrl3
             // 
-            this.panel6.Location = new System.Drawing.Point(259, 346);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(142, 100);
-            this.panel6.TabIndex = 12;
+            this.panelUrl3.Location = new System.Drawing.Point(259, 346);
+            this.panelUrl3.Name = "panelUrl3";
+            this.panelUrl3.Size = new System.Drawing.Size(142, 100);
+            this.panelUrl3.TabIndex = 12;
             // 
             // btnAddcart
             // 
@@ -220,6 +220,7 @@
             this.btnAddcart.Size = new System.Drawing.Size(181, 51);
             this.btnAddcart.TabIndex = 13;
             this.btnAddcart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAddcart.Click += new System.EventHandler(this.btnAddcart_Click);
             // 
             // btnAddwishlist
             // 
@@ -244,6 +245,7 @@
             this.btnAddwishlist.Size = new System.Drawing.Size(181, 51);
             this.btnAddwishlist.TabIndex = 14;
             this.btnAddwishlist.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAddwishlist.Click += new System.EventHandler(this.btnAddwishlist_Click);
             // 
             // panel7
             // 
@@ -298,8 +300,8 @@
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.btnAddwishlist);
             this.Controls.Add(this.btnAddcart);
-            this.Controls.Add(this.panel6);
-            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panelUrl3);
+            this.Controls.Add(this.panelUrl2);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -309,7 +311,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelName);
-            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panelUrl1);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -328,7 +330,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panelUrl1;
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -338,8 +340,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panelUrl2;
+        private System.Windows.Forms.Panel panelUrl3;
         private Bunifu.Framework.UI.BunifuThinButton2 btnAddcart;
         private Bunifu.Framework.UI.BunifuThinButton2 btnAddwishlist;
         private System.Windows.Forms.Panel panel7;

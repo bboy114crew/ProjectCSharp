@@ -16,5 +16,15 @@ namespace GameShop
         {
             InitializeComponent();
         }
+
+        private void btnAddcart_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddwishlist_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
