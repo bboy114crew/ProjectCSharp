@@ -31,8 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductDetail));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panelUrl1 = new System.Windows.Forms.Panel();
             this.labelName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -52,6 +52,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.labelUsername = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -67,19 +68,19 @@
             this.panel1.Size = new System.Drawing.Size(991, 43);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
-            // 
-            this.panel2.Location = new System.Drawing.Point(0, 45);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 100);
-            this.panel2.TabIndex = 1;
-            // 
             // panel3
             // 
             this.panel3.Location = new System.Drawing.Point(0, 42);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(200, 100);
             this.panel3.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(0, 45);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(200, 100);
+            this.panel2.TabIndex = 1;
             // 
             // panelUrl1
             // 
@@ -205,6 +206,7 @@
             this.btnAddcart.ActiveForecolor = System.Drawing.Color.White;
             this.btnAddcart.ActiveLineColor = System.Drawing.Color.SeaGreen;
             this.btnAddcart.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAddcart.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddcart.BackgroundImage")));
             this.btnAddcart.ButtonText = "Add to cart";
             this.btnAddcart.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddcart.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -230,6 +232,7 @@
             this.btnAddwishlist.ActiveForecolor = System.Drawing.Color.White;
             this.btnAddwishlist.ActiveLineColor = System.Drawing.Color.SeaGreen;
             this.btnAddwishlist.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAddwishlist.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddwishlist.BackgroundImage")));
             this.btnAddwishlist.ButtonText = "Add wishlist";
             this.btnAddwishlist.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddwishlist.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -289,11 +292,21 @@
             this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this;
             // 
+            // labelUsername
+            // 
+            this.labelUsername.AutoSize = true;
+            this.labelUsername.Location = new System.Drawing.Point(732, 441);
+            this.labelUsername.Name = "labelUsername";
+            this.labelUsername.Size = new System.Drawing.Size(0, 13);
+            this.labelUsername.TabIndex = 18;
+            this.labelUsername.Visible = false;
+            // 
             // ProductDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(991, 729);
+            this.Controls.Add(this.labelUsername);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label10);
@@ -317,6 +330,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ProductDetail";
             this.Text = "ProductDetail";
+            this.Load += new System.EventHandler(this.ProductDetail_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -349,5 +363,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private System.Windows.Forms.Label labelUsername;
     }
 }

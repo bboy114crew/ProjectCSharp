@@ -33,12 +33,12 @@ namespace GameShop.DAL
                     string name = Convert.ToString(data["ProductName"]);
                     string des = Convert.ToString(data["Description"]);
                     double price = Convert.ToDouble(data["Price"]);
-                    float sale = (float) data["Sale"];
+                    int sale = Convert.ToInt16(data["Sale"]);
                     int cateID = Convert.ToInt16(data["CategoryID"]);
                     int spID = Convert.ToInt16(data["SupplierID"]);
                     DateTime date = Convert.ToDateTime(data["PublishDate"]);
                     int rate = Convert.ToInt16(data["Rating"]);
-                    Products p = new Products(id, name, des, price, sale, date, rate, new Categories(1, "") , new Suppliers(1, ""));
+                    Products p = new Products(id, name, des, price, sale, date, rate, new Categories(cateID, "") , new Suppliers(spID, ""));
                     ps.Add(p);
                 }
             }
@@ -78,7 +78,7 @@ namespace GameShop.DAL
                     string name = Convert.ToString(data["ProductName"]);
                     string des = Convert.ToString(data["Description"]);
                     double price = Convert.ToDouble(data["Price"]);
-                    float sale = (float)data["Sale"];
+                    int sale = Convert.ToInt16(data["Sale"]);
                     int cateID = Convert.ToInt16(data["CategoryID"]);
                     int spID = Convert.ToInt16(data["SupplierID"]);
                     DateTime date = Convert.ToDateTime(data["PublishDate"]);
