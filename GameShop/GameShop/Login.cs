@@ -19,7 +19,7 @@ namespace GameShop
             
 
         }
-
+        public Form formdetail { get; set; }
         private void Login_Load(object sender, EventArgs e)
         {
             panelBGRegister.Visible = false;
@@ -57,6 +57,8 @@ namespace GameShop
                 }
                 else
                 {
+                    Label lb = (Label)formdetail.Controls["labelUsername"];
+                    lb.Text = tbUsername.Text;
                     this.Close();
                 }
             }else
