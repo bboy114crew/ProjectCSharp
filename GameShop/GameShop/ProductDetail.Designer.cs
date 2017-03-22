@@ -53,6 +53,9 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.labelUsername = new System.Windows.Forms.Label();
+            this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
+            this.btnWishlist = new Bunifu.Framework.UI.BunifuTileButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -60,6 +63,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnWishlist);
+            this.panel1.Controls.Add(this.bunifuTileButton1);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -301,11 +306,61 @@
             this.labelUsername.TabIndex = 18;
             this.labelUsername.Visible = false;
             // 
+            // bunifuTileButton1
+            // 
+            this.bunifuTileButton1.BackColor = System.Drawing.Color.SeaGreen;
+            this.bunifuTileButton1.color = System.Drawing.Color.SeaGreen;
+            this.bunifuTileButton1.colorActive = System.Drawing.Color.MediumSeaGreen;
+            this.bunifuTileButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTileButton1.Font = new System.Drawing.Font("Century Gothic", 15.75F);
+            this.bunifuTileButton1.ForeColor = System.Drawing.Color.White;
+            this.bunifuTileButton1.Image = null;
+            this.bunifuTileButton1.ImagePosition = 20;
+            this.bunifuTileButton1.ImageZoom = 50;
+            this.bunifuTileButton1.LabelPosition = 41;
+            this.bunifuTileButton1.LabelText = "";
+            this.bunifuTileButton1.Location = new System.Drawing.Point(846, 2);
+            this.bunifuTileButton1.Margin = new System.Windows.Forms.Padding(6);
+            this.bunifuTileButton1.Name = "bunifuTileButton1";
+            this.bunifuTileButton1.Size = new System.Drawing.Size(101, 38);
+            this.bunifuTileButton1.TabIndex = 19;
+            this.bunifuTileButton1.Click += new System.EventHandler(this.bunifuTileButton1_Click);
+            // 
+            // btnWishlist
+            // 
+            this.btnWishlist.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnWishlist.color = System.Drawing.Color.SeaGreen;
+            this.btnWishlist.colorActive = System.Drawing.Color.MediumSeaGreen;
+            this.btnWishlist.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnWishlist.Font = new System.Drawing.Font("Century Gothic", 15.75F);
+            this.btnWishlist.ForeColor = System.Drawing.Color.White;
+            this.btnWishlist.Image = null;
+            this.btnWishlist.ImagePosition = 20;
+            this.btnWishlist.ImageZoom = 50;
+            this.btnWishlist.LabelPosition = 41;
+            this.btnWishlist.LabelText = "";
+            this.btnWishlist.Location = new System.Drawing.Point(733, 2);
+            this.btnWishlist.Margin = new System.Windows.Forms.Padding(6);
+            this.btnWishlist.Name = "btnWishlist";
+            this.btnWishlist.Size = new System.Drawing.Size(101, 38);
+            this.btnWishlist.TabIndex = 20;
+            this.btnWishlist.Click += new System.EventHandler(this.btnWishlist_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(733, 179);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(13, 13);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "0";
+            // 
             // ProductDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(991, 729);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.labelUsername);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -329,6 +384,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ProductDetail";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProductDetail";
             this.Load += new System.EventHandler(this.ProductDetail_Load);
             this.panel1.ResumeLayout(false);
@@ -364,5 +420,8 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Label labelUsername;
+        private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton1;
+        private Bunifu.Framework.UI.BunifuTileButton btnWishlist;
+        private System.Windows.Forms.Label label1;
     }
 }

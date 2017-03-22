@@ -100,6 +100,7 @@ namespace GameShop.DAL
             return ps;
         }
 
+<<<<<<< HEAD
         public Dictionary<object, string> searchProduct(string search)
         {
             SqlCommand command;
@@ -154,5 +155,7 @@ namespace GameShop.DAL
             }
             return dict;
         }
+=======
+>>>>>>> 6b49dda9a24cbb7ce69ea5b3ddadf916341b9a0c
     }
 }

@@ -50,8 +50,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Basket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Basket.Designer.cs">
+      <DependentUpon>Basket.cs</DependentUpon>
+    </Compile>
     <Compile Include="DAL\AccountDB.cs" />
     <Compile Include="DAL\CategoryContext.cs" />
+    <Compile Include="DAL\CheckoutDB.cs" />
+    <Compile Include="DAL\CustomerDB.cs" />
     <Compile Include="DAL\DBContext.cs" />
     <Compile Include="DAL\ImageContext.cs" />
     <Compile Include="DAL\ProductContext.cs" />
@@ -74,6 +82,7 @@
     <Compile Include="Model\Order.cs" />
     <Compile Include="Model\OrderDetail.cs" />
     <Compile Include="Model\Products.cs" />
+    <Compile Include="Model\SessionOrder.cs" />
     <Compile Include="Model\Suppliers.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
@@ -92,6 +101,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Basket.resx">
+      <DependentUpon>Basket.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
