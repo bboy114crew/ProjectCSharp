@@ -8,5 +8,6 @@ namespace GameShop.Model
 {
     class Products
     {
+
     }
 }
