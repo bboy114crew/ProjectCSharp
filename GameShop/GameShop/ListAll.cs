@@ -52,7 +52,7 @@ namespace GameShop
                     btn1.BackgroundImageLayout = ImageLayout.Stretch;
 
                     pl2.Controls.Add(btn1);
-                    if (j > 5) {
+                    if (j % 5 == 0) {
                         indexPl2 += 198;
 
                     }
