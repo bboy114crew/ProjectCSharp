@@ -23,5 +23,7 @@ namespace GameShop.Model
             this.Quantity = quantity;
             this.UnitPrice = price;
         }
+
+     
     }
 }
