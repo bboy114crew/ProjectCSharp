@@ -53,6 +53,7 @@
     <Compile Include="DAL\AccountDB.cs" />
     <Compile Include="DAL\CategoryContext.cs" />
     <Compile Include="DAL\DBContext.cs" />
+    <Compile Include="DAL\ImageContext.cs" />
     <Compile Include="DAL\ProductContext.cs" />
     <Compile Include="DAL\SupplierContext.cs" />
     <Compile Include="Form1.cs">

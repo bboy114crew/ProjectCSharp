@@ -24,6 +24,7 @@ namespace GameShop
         {
             CategoryContext categoryContext = new CategoryContext();
             List<Categories> categorieses = categoryContext.getAll();
+            ProductContext productContext = new ProductContext();
             
 
 
@@ -50,8 +51,10 @@ namespace GameShop
                 pl2.Size = new Size(985, 172);
                 pl2.Location = new Point(6, 37);
 
+                List<Products> productses = productContext.getByCategoryID(categorieses[i].id);
+
                 int indexPl2 = 1;
-                for (int j = 0; j < 5; j++)
+                for (int j = 0; j < productses.Count; j++)
                 {
                     Button btn1 = new Button();
                     btn1.FlatStyle = FlatStyle.Flat;
