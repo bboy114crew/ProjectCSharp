@@ -11,32 +11,40 @@ namespace GameShop.DAL
 {
     class AccountDB
     {
-        static public DataTable getDataTable(string sql)
-        {
-            SqlConnection con = new SqlConnection(DBContext.url());
-            SqlCommand command = new SqlCommand(sql, con);
-            SqlDataAdapter adapt = new SqlDataAdapter(command);
-            DataSet ds = new DataSet();
-            adapt.Fill(ds);
-            return ds.Tables[0];
-        }
+
         static public bool GetAccountByUsername(string username,string password)
         {
-            string sql = "SELECT * FROM [Accounts] WHERE Username = "+username +" AND Password = "+password;
-            DataTable dt = getDataTable(sql);
-            if (dt.Rows == null)
-                return false;
-            else
+            string sql = "SELECT * FROM [Accounts] WHERE Username = @username AND Password = @pass";
+            SqlConnection connection = DBContext.openConnection();
+            SqlCommand command = connection.CreateCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = sql;
+            command.Parameters.AddWithValue("@username", username);
+            command.Parameters.AddWithValue("@pass", password);
+            SqlDataReader dr = command.ExecuteReader();
+            if (dr.Read())
+            {
                 return true;
+            }
+            else
+                return false;
+
         }
         static public bool duplicateAccount(string username)
         {
             string sql = "SELECT * FROM [Accounts] WHERE Username = @username";
-            DataTable dt = getDataTable(sql);
-            if (dt.Rows == null)
-                return true;
-            else
+            SqlConnection connection = DBContext.openConnection();
+            SqlCommand command = connection.CreateCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = sql;
+            command.Parameters.AddWithValue("@username", username);
+            SqlDataReader dr = command.ExecuteReader();
+            if (dr.Read())
+            {
                 return false;
+            }
+            else
+                return true;
         }
         static public void register(string cusname,string email,string address,string phone,string username,string password)
         {
