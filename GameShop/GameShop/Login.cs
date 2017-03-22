@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GameShop.DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,29 +31,51 @@ namespace GameShop
             panelBGLogin.Visible = false;
             panelBGRegister.Visible = true;
         }
-
+        static bool validate(string username)
+        {
+            if (username.Length < 6 || username.Length > 32)
+                return false;
+            foreach(char word in username)
+            {
+                if ((word < 48) || (word > 56 && word < 65) || (word > 90 && word < 97) || word > 122)
+                    return false;
+            }
+            return true;
+        }
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            bool checkValid = true;
-            if(tbUsername.Text.Length <=6 )
-            {
-                checkValid = false;
-            }
-            if (tbPassword.Text.Length <= 6 || tbPassword.Text.Length >= 32)
-            {
-                checkValid = false;
-            }
-            if (checkValid)
-            {
 
+            if(validate(tbUsername.Text) && validate(tbPassword.Text))
+            {
+                if (!AccountDB.GetAccountByUsername(tbUsername.Text, tbPassword.Text))
+                {
+                    tbUsername.Select();
+                    labelError.Text = "Username or Password is not true";
+                }
+                else
+                {
+                    this.Close();
+                }
+            }else
+            {
+                labelError.Text = "Username or Password is not true.";
             }
-            
 
         }
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
+            if (validate(tbRegisterUsername.Text) && validate(tbRegisterPassword.Text))
+            {
+                if (!tbRegisterPassword.Text.Equals(tbResgisterRepassword.Text))
+                {
 
+                }
+            }
+            else
+            {
+
+            }
 
         }
 
@@ -73,7 +96,11 @@ namespace GameShop
             if (tbUsername.Text.Equals("Username"))
                 tbUsername.Text = "";
         }
-
+        private void tbUsername_Click(object sender, EventArgs e)
+        {
+            if (tbUsername.Text.Equals("Username"))
+                tbUsername.Text = "";
+        }
         private void tbPassword_OnValueChanged(object sender, EventArgs e)
         {
             if (tbPassword.Text.Equals("Password"))
@@ -83,6 +110,11 @@ namespace GameShop
         private void tbRegisterUsername_OnValueChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void btnSignup_Click(object sender, EventArgs e)
+        {
+
         }
     }
     
