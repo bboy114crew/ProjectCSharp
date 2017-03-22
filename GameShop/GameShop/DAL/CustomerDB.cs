@@ -21,11 +21,16 @@ namespace GameShop.DAL
         }
         static public int getCustomerID(string username)
         {
-            string sql = "select * from Accounts WHERE Username = " +username;
-            DataTable dt = getDataTable(sql);
-            foreach (DataRow dr in dt.Rows)
+            string sql = "select * from Accounts WHERE Username = @username";
+            SqlConnection connection = DBContext.openConnection();
+            SqlCommand command = connection.CreateCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = sql;
+            command.Parameters.AddWithValue("@username", username);
+            SqlDataReader dr = command.ExecuteReader();
+            if (dr.Read())
             {
-                return Convert.ToInt16(dr["CustomerID"].ToString());
+                return Convert.ToInt32(dr["CustomerID"].ToString());
             }
             return 1;
         }

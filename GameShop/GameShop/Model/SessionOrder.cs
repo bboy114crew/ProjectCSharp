@@ -11,6 +11,6 @@ namespace GameShop.Model
         public static List<int> wishlist = new List<int>();
         public static Order getOrders = new Order();
         public static string user ="";
-        public static int productId = -1;
+        public static int productId = 3;
     }
 }

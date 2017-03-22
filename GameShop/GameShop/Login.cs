@@ -84,20 +84,17 @@ namespace GameShop
                 }
                 else
                 {
-                    panelBGRegister.Visible = false;
-                    panelBGLogin.Visible = false;
-                    panelInfo.Visible = true;
-                    //if (AccountDB.duplicateAccount(tbRegisterUsername.Text))
-                    //{
-                    //    panelBGRegister.Visible = false;
-                    //    panelBGLogin.Visible = false;
-                    //    panelInfo.Visible = true;
-                    //}
-                    //else
-                    //{
-                    //    labelRegister.Text = "Account is exist";
-                    //    this.tbRegisterUsername.Select();
-                    //}
+                    if (AccountDB.duplicateAccount(tbRegisterUsername.Text))
+                    {
+                        panelBGRegister.Visible = false;
+                        panelBGLogin.Visible = false;
+                        panelInfo.Visible = true;
+                    }
+                    else
+                    {
+                        labelRegister.Text = "Account is exist";
+                        this.tbRegisterUsername.Select();
+                    }
                 }
                 
             }
@@ -137,7 +134,7 @@ namespace GameShop
         {
             if(!tbCusname.Text.Equals("") && !tbMail.Text.Equals("")&& !tbPhone.Text.Equals("")&& !tbAddress.Text.Equals(""))
             {
-                AccountDB.register(tbCusname.Text,tbMail.Text,tbAddress.Text,tbPhone.Text,tbRegisterUsername.Text,tbResgisterRepassword.Text);
+                AccountDB.register(tbCusname.Text, tbMail.Text, tbAddress.Text, tbPhone.Text, tbUsername.Text, tbPassword.Text);
                 labelSuccess.Text = "Sign up successfully";
                 tbUsername.Text = tbRegisterUsername.Text;
                 tbRegisterUsername.Text = "Username";
@@ -151,8 +148,11 @@ namespace GameShop
                 labelError.Text = "";
                 labelRegister.Text = "";
                 labelLogin.Text = "";
-                this.Close();
-            }else
+                panelBGRegister.Visible = false;
+                panelInfo.Visible = false;
+                panelBGLogin.Visible = true;
+            }
+            else
             {
                 label5.Text = "Fields is not blank";
             }

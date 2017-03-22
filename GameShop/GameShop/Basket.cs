@@ -34,5 +34,10 @@ namespace GameShop
             }
             SessionOrder.getOrders = new Order();
         }
+
+        private void Basket_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

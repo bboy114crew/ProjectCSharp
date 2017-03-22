@@ -30,9 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Basket));
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
+<<<<<<< HEAD
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lbTotal = new Bunifu.Framework.UI.BunifuCustomLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+=======
+            this.label1 = new System.Windows.Forms.Label();
+>>>>>>> acb90adcd2bcaa29c15a0c1fab225f03cdb5fe71
             this.SuspendLayout();
             // 
             // bunifuThinButton21
@@ -61,6 +65,7 @@
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
             // 
+<<<<<<< HEAD
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -78,19 +83,39 @@
             this.lbTotal.Size = new System.Drawing.Size(16, 19);
             this.lbTotal.TabIndex = 2;
             this.lbTotal.Text = "t";
+=======
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(163, 48);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(212, 39);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Your Basket";
+>>>>>>> acb90adcd2bcaa29c15a0c1fab225f03cdb5fe71
             // 
             // Basket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(685, 542);
             this.Controls.Add(this.lbTotal);
             this.Controls.Add(this.dataGridView1);
+=======
+            this.ClientSize = new System.Drawing.Size(870, 651);
+            this.Controls.Add(this.label1);
+>>>>>>> acb90adcd2bcaa29c15a0c1fab225f03cdb5fe71
             this.Controls.Add(this.bunifuThinButton21);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Basket";
             this.Text = "Basket";
+<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+=======
+            this.Load += new System.EventHandler(this.Basket_Load);
+>>>>>>> acb90adcd2bcaa29c15a0c1fab225f03cdb5fe71
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -99,7 +124,11 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
+<<<<<<< HEAD
         private System.Windows.Forms.DataGridView dataGridView1;
         private Bunifu.Framework.UI.BunifuCustomLabel lbTotal;
+=======
+        private System.Windows.Forms.Label label1;
+>>>>>>> acb90adcd2bcaa29c15a0c1fab225f03cdb5fe71
     }
 }
