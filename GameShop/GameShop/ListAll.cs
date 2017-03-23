@@ -36,7 +36,8 @@ namespace GameShop
                 btn1.Size = new Size(130, 130);
                 btn1.Location = new Point(indexPl1X, indexPl1Y);
                 btn1.FlatAppearance.BorderSize = 0;
-
+                btn1.Click += btnImg_Click;
+                btn1.Name = products[i].id + "";
                 //Image myimage = new Bitmap(@folderImgPath()+@"Image\nier\pic5.jpg");
                 Images img = imageContext.getByProductID(products[i].id);
                 Image myimage = new Bitmap(@"C:\Users\Jic\Desktop\" + @img.url);
@@ -59,7 +60,10 @@ namespace GameShop
 
         private void btnImg_Click(object sender, EventArgs e)
         {
-            
+            Button btn = sender as Button;
+            ProductDetail form = new ProductDetail();
+            SessionOrder.productId = Convert.ToInt16(btn.Name);
+            form.Show();
         }
 
         private void tbSearch_TextChanged(object sender, EventArgs e)

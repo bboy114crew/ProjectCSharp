@@ -34,6 +34,9 @@
             this.tbPassword = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label1 = new System.Windows.Forms.Label();
             this.panelBGLogin = new System.Windows.Forms.Panel();
+            this.labelSuccess = new System.Windows.Forms.Label();
+            this.labelError = new System.Windows.Forms.Label();
+            this.labelLogin = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnNextSignUp = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnLogin = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -41,23 +44,21 @@
             this.tbRegisterUsername = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.tbResgisterRepassword = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.panelBGRegister = new System.Windows.Forms.Panel();
+            this.labelRegister = new System.Windows.Forms.Label();
+            this.btnCancel = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label2 = new System.Windows.Forms.Label();
             this.tbRegisterPassword = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.labelLogin = new System.Windows.Forms.Label();
-            this.labelError = new System.Windows.Forms.Label();
-            this.btnCancel = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.labelSuccess = new System.Windows.Forms.Label();
             this.panelInfo = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tbAddress = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label4 = new System.Windows.Forms.Label();
             this.tbMail = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.tbPhone = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.btnSignup = new Bunifu.Framework.UI.BunifuThinButton2();
             this.tbCusname = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.tbAddress = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.labelRegister = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.panelBGLogin.SuspendLayout();
             this.panelBGRegister.SuspendLayout();
             this.panelInfo.SuspendLayout();
@@ -143,6 +144,35 @@
             this.panelBGLogin.Size = new System.Drawing.Size(394, 457);
             this.panelBGLogin.TabIndex = 8;
             this.panelBGLogin.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // labelSuccess
+            // 
+            this.labelSuccess.AutoSize = true;
+            this.labelSuccess.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSuccess.ForeColor = System.Drawing.Color.Lime;
+            this.labelSuccess.Location = new System.Drawing.Point(66, 316);
+            this.labelSuccess.Name = "labelSuccess";
+            this.labelSuccess.Size = new System.Drawing.Size(0, 17);
+            this.labelSuccess.TabIndex = 12;
+            // 
+            // labelError
+            // 
+            this.labelError.AutoSize = true;
+            this.labelError.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelError.ForeColor = System.Drawing.Color.Red;
+            this.labelError.Location = new System.Drawing.Point(66, 316);
+            this.labelError.Name = "labelError";
+            this.labelError.Size = new System.Drawing.Size(0, 17);
+            this.labelError.TabIndex = 11;
+            // 
+            // labelLogin
+            // 
+            this.labelLogin.AutoSize = true;
+            this.labelLogin.ForeColor = System.Drawing.Color.Red;
+            this.labelLogin.Location = new System.Drawing.Point(75, 332);
+            this.labelLogin.Name = "labelLogin";
+            this.labelLogin.Size = new System.Drawing.Size(0, 13);
+            this.labelLogin.TabIndex = 10;
             // 
             // label3
             // 
@@ -294,6 +324,42 @@
             this.panelBGRegister.Size = new System.Drawing.Size(394, 457);
             this.panelBGRegister.TabIndex = 11;
             // 
+            // labelRegister
+            // 
+            this.labelRegister.AutoSize = true;
+            this.labelRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRegister.ForeColor = System.Drawing.Color.Red;
+            this.labelRegister.Location = new System.Drawing.Point(63, 328);
+            this.labelRegister.Name = "labelRegister";
+            this.labelRegister.Size = new System.Drawing.Size(0, 17);
+            this.labelRegister.TabIndex = 14;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.ActiveBorderThickness = 1;
+            this.btnCancel.ActiveCornerRadius = 20;
+            this.btnCancel.ActiveFillColor = System.Drawing.Color.Gray;
+            this.btnCancel.ActiveForecolor = System.Drawing.Color.White;
+            this.btnCancel.ActiveLineColor = System.Drawing.Color.DarkRed;
+            this.btnCancel.BackColor = System.Drawing.SystemColors.Control;
+            this.btnCancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.BackgroundImage")));
+            this.btnCancel.ButtonText = "Cancel";
+            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnCancel.IdleBorderThickness = 1;
+            this.btnCancel.IdleCornerRadius = 20;
+            this.btnCancel.IdleFillColor = System.Drawing.Color.White;
+            this.btnCancel.IdleForecolor = System.Drawing.Color.DarkRed;
+            this.btnCancel.IdleLineColor = System.Drawing.Color.DarkRed;
+            this.btnCancel.Location = new System.Drawing.Point(233, 367);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(5);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(107, 51);
+            this.btnCancel.TabIndex = 13;
+            this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -329,64 +395,10 @@
             this.tbRegisterPassword.OnValueChanged += new System.EventHandler(this.tbRegisterPassword_OnValueChanged);
             this.tbRegisterPassword.Click += new System.EventHandler(this.tbRegisterPassword_OnValueChanged);
             // 
-            // labelLogin
-            // 
-            this.labelLogin.AutoSize = true;
-            this.labelLogin.ForeColor = System.Drawing.Color.Red;
-            this.labelLogin.Location = new System.Drawing.Point(75, 332);
-            this.labelLogin.Name = "labelLogin";
-            this.labelLogin.Size = new System.Drawing.Size(0, 13);
-            this.labelLogin.TabIndex = 10;
-            // 
-            // labelError
-            // 
-            this.labelError.AutoSize = true;
-            this.labelError.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelError.ForeColor = System.Drawing.Color.Red;
-            this.labelError.Location = new System.Drawing.Point(66, 316);
-            this.labelError.Name = "labelError";
-            this.labelError.Size = new System.Drawing.Size(0, 17);
-            this.labelError.TabIndex = 11;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.ActiveBorderThickness = 1;
-            this.btnCancel.ActiveCornerRadius = 20;
-            this.btnCancel.ActiveFillColor = System.Drawing.Color.Gray;
-            this.btnCancel.ActiveForecolor = System.Drawing.Color.White;
-            this.btnCancel.ActiveLineColor = System.Drawing.Color.DarkRed;
-            this.btnCancel.BackColor = System.Drawing.SystemColors.Control;
-            this.btnCancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.BackgroundImage")));
-            this.btnCancel.ButtonText = "Cancel";
-            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnCancel.IdleBorderThickness = 1;
-            this.btnCancel.IdleCornerRadius = 20;
-            this.btnCancel.IdleFillColor = System.Drawing.Color.White;
-            this.btnCancel.IdleForecolor = System.Drawing.Color.DarkRed;
-            this.btnCancel.IdleLineColor = System.Drawing.Color.DarkRed;
-            this.btnCancel.Location = new System.Drawing.Point(233, 367);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(5);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(107, 51);
-            this.btnCancel.TabIndex = 13;
-            this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // labelSuccess
-            // 
-            this.labelSuccess.AutoSize = true;
-            this.labelSuccess.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSuccess.ForeColor = System.Drawing.Color.Lime;
-            this.labelSuccess.Location = new System.Drawing.Point(66, 316);
-            this.labelSuccess.Name = "labelSuccess";
-            this.labelSuccess.Size = new System.Drawing.Size(0, 17);
-            this.labelSuccess.TabIndex = 12;
-            // 
             // panelInfo
             // 
             this.panelInfo.BackColor = System.Drawing.SystemColors.Control;
+            this.panelInfo.Controls.Add(this.button1);
             this.panelInfo.Controls.Add(this.label5);
             this.panelInfo.Controls.Add(this.tbAddress);
             this.panelInfo.Controls.Add(this.bunifuThinButton21);
@@ -399,6 +411,39 @@
             this.panelInfo.Name = "panelInfo";
             this.panelInfo.Size = new System.Drawing.Size(394, 457);
             this.panelInfo.TabIndex = 12;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(72, 353);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(0, 17);
+            this.label5.TabIndex = 21;
+            // 
+            // tbAddress
+            // 
+            this.tbAddress.BackColor = System.Drawing.SystemColors.Control;
+            this.tbAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbAddress.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.tbAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbAddress.HintForeColor = System.Drawing.Color.Empty;
+            this.tbAddress.HintText = "";
+            this.tbAddress.isPassword = false;
+            this.tbAddress.LineFocusedColor = System.Drawing.Color.DarkRed;
+            this.tbAddress.LineIdleColor = System.Drawing.Color.DarkRed;
+            this.tbAddress.LineMouseHoverColor = System.Drawing.Color.DarkRed;
+            this.tbAddress.LineThickness = 4;
+            this.tbAddress.Location = new System.Drawing.Point(66, 275);
+            this.tbAddress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbAddress.Name = "tbAddress";
+            this.tbAddress.Size = new System.Drawing.Size(274, 52);
+            this.tbAddress.TabIndex = 20;
+            this.tbAddress.Text = "Address";
+            this.tbAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tbAddress.OnValueChanged += new System.EventHandler(this.tbAddress_OnValueChanged);
+            this.tbAddress.Click += new System.EventHandler(this.tbAddress_OnValueChanged);
             // 
             // bunifuThinButton21
             // 
@@ -533,53 +578,21 @@
             this.tbCusname.OnValueChanged += new System.EventHandler(this.tbCusname_OnValueChanged);
             this.tbCusname.Click += new System.EventHandler(this.tbCusname_OnValueChanged);
             // 
-            // tbAddress
-            // 
-            this.tbAddress.BackColor = System.Drawing.SystemColors.Control;
-            this.tbAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbAddress.Font = new System.Drawing.Font("Century Gothic", 11F);
-            this.tbAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbAddress.HintForeColor = System.Drawing.Color.Empty;
-            this.tbAddress.HintText = "";
-            this.tbAddress.isPassword = false;
-            this.tbAddress.LineFocusedColor = System.Drawing.Color.DarkRed;
-            this.tbAddress.LineIdleColor = System.Drawing.Color.DarkRed;
-            this.tbAddress.LineMouseHoverColor = System.Drawing.Color.DarkRed;
-            this.tbAddress.LineThickness = 4;
-            this.tbAddress.Location = new System.Drawing.Point(66, 275);
-            this.tbAddress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbAddress.Name = "tbAddress";
-            this.tbAddress.Size = new System.Drawing.Size(274, 52);
-            this.tbAddress.TabIndex = 20;
-            this.tbAddress.Text = "Address";
-            this.tbAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.tbAddress.OnValueChanged += new System.EventHandler(this.tbAddress_OnValueChanged);
-            this.tbAddress.Click += new System.EventHandler(this.tbAddress_OnValueChanged);
-            // 
-            // labelRegister
-            // 
-            this.labelRegister.AutoSize = true;
-            this.labelRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRegister.ForeColor = System.Drawing.Color.Red;
-            this.labelRegister.Location = new System.Drawing.Point(63, 328);
-            this.labelRegister.Name = "labelRegister";
-            this.labelRegister.Size = new System.Drawing.Size(0, 17);
-            this.labelRegister.TabIndex = 14;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(72, 353);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(0, 17);
-            this.label5.TabIndex = 21;
-            // 
             // bunifuElipse1
             // 
             this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(366, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(25, 25);
+            this.button1.TabIndex = 22;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Login
             // 
@@ -634,5 +647,6 @@
         private System.Windows.Forms.Label labelRegister;
         private System.Windows.Forms.Label label5;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private System.Windows.Forms.Button button1;
     }
 }

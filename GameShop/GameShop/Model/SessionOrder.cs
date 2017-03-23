@@ -12,5 +12,6 @@ namespace GameShop.Model
         public static Order getOrders = new Order();
         public static string user ="";
         public static int productId = 3;
+        public static int countBasket = 0;
     }
 }

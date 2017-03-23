@@ -35,7 +35,7 @@ namespace GameShop
             for (int i = 0; i < categorieses.Count; i++)
             {
 
-                List<Products> productses = productContext.getByCategoryID(categorieses[i].id);
+                List<Products> productses = productContext.get5ByCategoryID(categorieses[i].id);
 
                 Panel pl2 = new Panel();
                 pl2.BackColor = Color.White;
@@ -153,6 +153,29 @@ namespace GameShop
         private void bunifuImageButton3_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void bunifuFlatButton5_Click(object sender, EventArgs e)
+        {
+            Contact form = new Contact();
+            form.Show();
+        }
+
+        private void bunifuFlatButton4_Click(object sender, EventArgs e)
+        {
+            Basket form = new Basket();
+            form.Show();
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            if (!SessionOrder.user.Equals(""))
+            {
+                SessionOrder.user = "";
+                SessionOrder.countBasket = 0;
+                SessionOrder.getOrders = new Order();
+                DialogResult result = MessageBox.Show("Logout Success", "Confirmation", MessageBoxButtons.OK);
+            }
         }
     }
 }

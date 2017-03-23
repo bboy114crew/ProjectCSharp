@@ -215,6 +215,11 @@ namespace GameShop
             if (tbAddress.Text.Equals("Address"))
                 tbAddress.Text = "";
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 
 }

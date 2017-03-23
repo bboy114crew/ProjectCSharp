@@ -33,11 +33,21 @@ namespace GameShop
                 CheckoutDB.insertOrderDetail(id, SessionOrder.productId, o.Quantity, o.UnitPrice * o.Quantity);
             }
             SessionOrder.getOrders = new Order();
+            DialogResult result = MessageBox.Show("Checkout Success", "Confirmation", MessageBoxButtons.OK);
+            if (result == DialogResult.OK)
+            {
+                this.Close();
+            }
         }
 
         private void Basket_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
